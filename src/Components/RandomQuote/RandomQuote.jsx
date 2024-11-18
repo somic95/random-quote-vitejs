@@ -37,7 +37,7 @@ const RandomQuote = () => {
     }
 
     loadQuotes();
-  }); 
+  }, [quote]); 
 
   // Select a random quote from the loaded quotes
   const random = () => {
