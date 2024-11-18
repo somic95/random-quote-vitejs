@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./RandomQuote.css";
 import twitter_icon from "../Assets/twitter.png";
 import reload_icon from "../Assets/reload.png";
+import { API_KEY } from "../../data";
 
 const RandomQuote = () => {
   const [quotes, setQuotes] = useState([]); // State to store the quotes
@@ -16,7 +17,7 @@ const RandomQuote = () => {
     async function loadQuotes() {
       const headers = new Headers({
         "Content-Type": "application/json",
-        "x-api-key": "yeV9Wi01eQZhLRbhCAOC3g==9xgTfjvsE1aFeHDk",
+        "x-api-key": API_KEY,
       });
 
       const requestOptions = {
@@ -30,15 +31,16 @@ const RandomQuote = () => {
           requestOptions
         );
         const data = await response.json();
+
         setQuotes(data); // Update the quotes state
       } catch (error) {
         console.error("Failed to fetch quotes:", error);
       }
     }
-    console.log(quotes);
-    
+    console.log(quote);
+
     loadQuotes();
-  }, [quote]); 
+  }, [quote]); // Empty dependency array ensures it runs only once but i remove for unlimit random
 
   // Select a random quote from the loaded quotes
   const random = () => {
