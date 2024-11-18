@@ -37,7 +37,7 @@ const RandomQuote = () => {
     }
 
     loadQuotes();
-  }, []); // Empty dependency array ensures it runs only once
+  }); 
 
   // Select a random quote from the loaded quotes
   const random = () => {
