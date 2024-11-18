@@ -35,7 +35,8 @@ const RandomQuote = () => {
         console.error("Failed to fetch quotes:", error);
       }
     }
-
+    console.log(quotes);
+    
     loadQuotes();
   }, [quote]); 
 
