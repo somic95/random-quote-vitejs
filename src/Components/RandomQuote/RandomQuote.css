@@ -54,3 +54,18 @@
 .icons img:hover {
     transform: translateY(-2px);
 }
+
+@media (max-width: 768px) {
+    .container {
+        width: 600px;
+    }
+    .line {
+        width: 550px;
+    }
+}
+
+@media (min-width: 850px) {
+    .container {
+        width: 800px;
+    }
+}
