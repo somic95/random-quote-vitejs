@@ -55,7 +55,16 @@
     transform: translateY(-2px);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 619px) {
+    .container {
+        width: 400px;
+    }
+    .line {
+        width: 375px;
+    }
+}
+
+@media (min-width: 620px) and (max-width: 849px) {
     .container {
         width: 600px;
     }
